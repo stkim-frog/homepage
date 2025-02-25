@@ -53,16 +53,66 @@ body {
 
 .hero {
   margin-top: 4rem;
-  text-align: center;
-  padding: 8rem 5%;
-  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  padding: 6rem 5%;
+  background: linear-gradient(135deg, #0c0f1d, #1a1f3d);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: left;
 }
 
 .hero h1 {
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  color: var(--text-color);
+  background: linear-gradient(90deg, #fff, #a5b4fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trust-badges {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.trust-badges span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.hero-image {
+  position: relative;
+  height: 400px;
+}
+
+.trading-chart {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #2563eb22, #3b82f622);
+  border-radius: 1rem;
+  border: 1px solid #2563eb44;
+  position: relative;
+  overflow: hidden;
+}
+
+.trading-chart::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  animation: chart 3s ease-in-out infinite;
+}
+
+@keyframes chart {
+  0% { transform: translateY(200px) translateX(-100%) rotate(5deg); }
+  100% { transform: translateY(100px) translateX(100%) rotate(-5deg); }
 }
 
 .cta-buttons {
