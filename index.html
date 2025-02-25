@@ -4,8 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>BookHaven - Your Online Literary Paradise</title>
+  <meta name="description" content="Discover your next great read at BookHaven. Browse bestsellers, new releases, and thousands of books across all genres. Free shipping on orders over $35.">
+  <meta name="keywords" content="books, online bookstore, bestsellers, new releases, fiction, non-fiction, literature">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="BookHaven - Your Online Literary Paradise">
+  <meta property="og:description" content="Discover thousands of books across all genres at BookHaven. Shop bestsellers, new releases, and more.">
+  <meta property="og:type" content="website">
+  <title>BookHaven - Your Online Literary Paradise | Buy Books Online</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="canonical" href="https://bookhaven.com" />
 </head>
 <body>
   <header>
@@ -34,7 +41,7 @@
       <h2>New Releases</h2>
       <div class="book-grid">
         <div class="book-card">
-          <div class="book-cover"></div>
+          <img src="/images/midnight-library.jpg" alt="The Midnight Library by Matt Haig - A novel about infinite possibilities" class="book-cover">
           <h3>The Midnight Library</h3>
           <p class="author">Matt Haig</p>
           <p class="price">$24.99</p>
@@ -120,5 +127,26 @@
     </div>
     <p class="copyright">© 2024 BookHaven. All rights reserved.</p>
   </footer>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BookStore",
+      "name": "BookHaven",
+      "description": "Your Online Literary Paradise",
+      "offers": {
+        "@type": "Offer",
+        "itemOffered": [
+          {
+            "@type": "Book",
+            "name": "The Midnight Library",
+            "author": "Matt Haig",
+            "price": "24.99",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    }
+  </script>
 </body>
 </html>
